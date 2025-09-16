@@ -1,0 +1,11 @@
+name: Test Runner
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: [self-hosted]
+    steps:
+      - run: echo "Le runner est actif !"
