@@ -6,6 +6,6 @@ on:
 
 jobs:
   test:
-    runs-on: [self-hosted]
-    steps:
+    runs-on: self-hosted
+  steps:
       - run: echo "Le runner est actif !"
