@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, test-cd]  # Utiliser le runner self-hosted
+    runs-on: [self-hosted, deployment]  # Utiliser le runner self-hosted
 
     # Attention: Le runner est sur le même serveur que le site.
     steps:
