@@ -1,12 +1,18 @@
-name: Test Runner
+name: PR Request
+
 on:
   push:
     branches:
-      - main
+      - main  # Déclenchement lors d'un push sur la branche main
 
 jobs:
-  test:
-    runs-on: [self-hosted, Linux]
+  deploy:
+    runs-on: [self-hosted]  # Utiliser le runner self-hosted
+
+    # Attention: Le runner est sur le même serveur que le site.
     steps:
-      - run: echo "Le runner est actif !"
-        name: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Pull latest code
+        run: echo "bep"
