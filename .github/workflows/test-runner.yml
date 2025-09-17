@@ -6,6 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Linux]
     steps:
       - run: echo "Le runner est actif !"
+        name: Checkout code
