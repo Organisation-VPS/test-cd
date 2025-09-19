@@ -3,16 +3,15 @@ name: PR Request
 on:
   push:
     branches:
-      - main  # Déclenchement lors d'un push sur la branche main
+      - main
 
 jobs:
   deploy:
-    runs-on: [self-hosted]  # Utiliser le runner self-hosted
+    runs-on: [self-hosted]
 
-    # Attention: Le runner est sur le même serveur que le site.
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
 
       - name: Pull latest code
-        run: /var/www/html/deployment.sh
+        run: /var/www/html/deployment/deployment-test-cd.sh
