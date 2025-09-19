@@ -16,4 +16,4 @@ jobs:
 
       - name: Pull latest code
         run: |
-          . /var/www/html/test-cd/deployment.sh
+          . /var/www/html/deployment.sh
